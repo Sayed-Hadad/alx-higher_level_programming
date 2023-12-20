@@ -5,17 +5,16 @@ def list_division(my_list_1, my_list_2, list_length):
 
     for i in range(list_length):
         res = 0
-
         try:
-            element_1 = my_list_1[i] if i < len(my_list_1) else 0
-            element_2 = my_list_2[i] if i < len(my_list_2) else 0
-
-            res = element_1 / element_2
+            res = my_list_1[i] / my_list_2[i]
         except ZeroDivisionError:
+            res = 0
             print("division by 0")
         except TypeError:
+            res = 0
             print("wrong type")
         except IndexError:
+            res = 0
             print("out of range")
         finally:
             res_list.append(res)

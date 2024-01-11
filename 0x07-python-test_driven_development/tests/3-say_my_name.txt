@@ -1,0 +1,28 @@
+""" Testing 3-say_my_name.py """
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+	--- Normal case test ---
+	>>> say_my_name('Omar', 'Khaled')
+	My name is Omar Khaled
+
+	--- missing arguments ---
+	>>> say_my_name('Omar')
+	My name is Omar 
+
+	>>> say_my_name(None)
+	Traceback (most recent call last):
+	...
+	TypeError: first_name must be a string
+
+	--- Non-string args ---
+	>>> say_my_name(5, 'Khaled')
+	Traceback (most recent call last):
+	...
+	TypeError: first_name must be a string
+	
+	>>> say_my_name('Omar', 5)
+	Traceback (most recent call last):
+	...
+	TypeError: last_name must be a string
+

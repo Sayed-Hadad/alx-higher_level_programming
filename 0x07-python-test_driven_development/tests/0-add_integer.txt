@@ -6,8 +6,8 @@ The Testing module for 'add_integer' using doctest
 
 	>>> add_integer(5, 10)
 	15
-
-    """ adding floats """
+	
+	""" adding floats """
 
 	>>> add_integer(5, 10.4)
 	15
@@ -15,32 +15,35 @@ The Testing module for 'add_integer' using doctest
 	>>> add_integer(5.2, 10)
 	15
 
+	>>> add_integer(5.2, 10.4)
+	15
 
+	>>> add_integer(3.141592653589793, 10)
+	13
 
-    """ adding something not int or float """
+	""" adding something other that integer or float """
 
-    >>> add_integer("Abc", 1)
-    Traceback (most recent call last):
-        ...
-    TypeError: a must be an integer or float
+	>>> add_integer('a', 10)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
 
-    >>> add_integer(1 , "Abc")
-    Traceback (most recent call last):
-        ...
-    TypeError: b must be an integer or float
+	>>> add_integer(5, 'b')
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
 
-    """ missing args """
+	""" missing args """
 
-    >>> add_integer(2)
-    100
+	>>> add_integer(2)
+	100
 
-    >>> add_integer(None)
-    Traceback (most recent call last):
-        ...
-    TypeError: a must be an integer or float
+	>>> add_integer(None)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
 
-
-    """ Type of returned value """
+	""" Type of returned value """
 
 	>>> type(add_integer(5, 10))
 	<class 'int'>

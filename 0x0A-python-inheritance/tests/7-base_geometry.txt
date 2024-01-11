@@ -1,0 +1,57 @@
+""" Testing 7-base_geometry.py """
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = BaseGeometry()
+
+	--- Testing type of bg ---
+	>>> type(bg)
+	<class '7-base_geometry.BaseGeometry'>
+
+	--- Tesiting integer_validator() ---
+	>>> bg.integer_validator("something", 5)
+
+	--- zero input ---
+	>>> bg.integer_validator("something", 0)
+	Traceback (most recent call last):
+	...
+	ValueError: something must be greater than 0
+
+	--- -ve input ---
+	>>> bg.integer_validator("something", -2)
+	Traceback (most recent call last):
+	...
+	ValueError: something must be greater than 0
+
+	--- value is float ---
+	>>> bg.integer_validator("something", 3.14)
+	Traceback (most recent call last):
+	...
+	TypeError: something must be an integer
+
+	
+	--- value is string ---
+	>>> bg.integer_validator("something", "num")
+	Traceback (most recent call last):
+	...
+	TypeError: something must be an integer
+
+	--- None argument ---
+	>>> bg.integer_validator("something", None)
+	Traceback (most recent call last):
+	...
+	TypeError: something must be an integer
+
+	--- value is bool (sub-class of int) ---
+	>>> bg.integer_validator("something", True)
+	Traceback (most recent call last):
+	...
+	TypeError: something must be an integer
+
+
+
+	--- Testing area() ---
+	>>> bg.area()
+	Traceback (most recent call last):
+	...
+	Exception: area() is not implemented
+

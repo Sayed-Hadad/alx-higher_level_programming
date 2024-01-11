@@ -1,0 +1,44 @@
+""" Testing 1-my_list.py """
+
+>>> MyList = __import__('1-my_list').MyList
+
+
+	--- Normal Case ---
+	>>> my_list = MyList([1, 4, 5, 2, 3])
+	>>> my_list.print_sorted()
+	[1, 2, 3, 4, 5]
+
+	>>> print(my_list)
+	[1, 4, 5, 2, 3]
+
+	--- special cases (empty list, None arg, int arg)---
+	>>> my_list2 = MyList([])
+	>>> my_list2.print_sorted()
+	[]
+
+	>>> my_list2 = MyList(5)
+	Traceback (most recent call last):
+	...
+	TypeError: 'int' object is not iterable
+
+	>>> my_list2 = MyList(None)
+	Traceback (most recent call last):
+	...
+	TypeError: 'NoneType' object is not iterable
+
+	--- Test issubclass ---
+	>>> issubclass(MyList, list)
+	True
+
+	--- Test isinstance ---
+	>>> isinstance(MyList, list)
+	False
+	>>> isinstance(my_list, list)
+	True
+
+	--- Test Type ---
+	>>> type(my_list) == MyList
+	True
+	
+	>>> type(my_list) == list
+	False

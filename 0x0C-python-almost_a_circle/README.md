@@ -25,3 +25,11 @@
 | **9. Update #1** | Further improve update method to handle both \*args and \*\*kwargs. | :white_check_mark: Done |
 | **10. And now, the Square!** | Create a class, `Square`, inheriting from `Rectangle` to represent a square. | :white_check_mark: Done |
 | **11. Square size** | Specify and handle the size of the square in the `Square` class. | :white_check_mark: Done |
+| **12. Square update** | Add an update method specifically for `Square`. | :white_check_mark: Done |
+| **13. Rectangle instance to dictionary representation** | Implement a method to convert a `Rectangle` instance to a dictionary representation. | :white_check_mark: Done |
+| **14. Square instance to dictionary representation** | Implement a method to convert a `Square` instance to a dictionary representation. | :white_check_mark: Done |
+| **15. Dictionary to JSON string** | Implement a method to convert a dictionary to a JSON string. | :white_check_mark: Done |
+| **16. JSON string to file** | Implement a method to write a JSON string to a file. | :white_check_mark: Done |
+| **17. JSON string to dictionary** | Implement a method to convert a JSON string to a dictionary. | :white_check_mark: Done |
+| **18. Dictionary to Instance** | Implement a method to create an instance from a dictionary. | :white_check_mark: Done |
+| **19. File to instances** | Implement a method to create instances from a file. | :white_check_mark: Done |

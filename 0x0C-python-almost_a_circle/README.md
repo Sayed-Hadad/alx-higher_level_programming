@@ -23,3 +23,5 @@
 | **7. Display #1** | Enhance display method to support additional parameters. | :white_check_mark: Done |
 | **8. Update #0** | Add an update method to modify `Rectangle` attributes. | :white_check_mark: Done |
 | **9. Update #1** | Further improve update method to handle both \*args and \*\*kwargs. | :white_check_mark: Done |
+| **10. And now, the Square!** | Create a class, `Square`, inheriting from `Rectangle` to represent a square. | :white_check_mark: Done |
+| **11. Square size** | Specify and handle the size of the square in the `Square` class. | :white_check_mark: Done |

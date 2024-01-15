@@ -11,12 +11,15 @@ class Rectangle(Base):
         self.__y = y
 
     def __str__(self):
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.height}"
+        return (
+            f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - "
+            f"{self.__width}/{self.__height}"
+        )
 
     @property
     def width(self):
         return self.__width
-    
+
     @width.setter
     def width(self, w):
         if not isinstance(w, int):
@@ -28,7 +31,7 @@ class Rectangle(Base):
     @property
     def height(self):
         return self.__height
-    
+
     @height.setter
     def height(self, h):
         if not isinstance(h, int):
@@ -40,7 +43,7 @@ class Rectangle(Base):
     @property
     def x(self):
         return self.__x
-    
+
     @x.setter
     def x(self, x):
         if not isinstance(x, int):
@@ -48,11 +51,11 @@ class Rectangle(Base):
         elif x < 0:
             raise ValueError("x must be >= 0")
         self.__x = x
-    
+
     @property
     def y(self):
         return self.__y
-    
+
     @y.setter
     def y(self, y):
         if not isinstance(y, int):
@@ -60,7 +63,7 @@ class Rectangle(Base):
         elif y < 0:
             raise ValueError("y must be >= 0")
         self.__y = y
-    
+
     def area(self):
         return self.__width * self.__height
 
@@ -78,6 +81,12 @@ class Rectangle(Base):
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
-    
+
     def to_dictionary(self):
-        return {'id' : self.id , 'width': self.width , 'height' : self.height , 'x' : self.x , 'y' : self.y}
+        return {
+            'id': self.id,
+            'width': self.width,
+            'height': self.height,
+            'x': self.x,
+            'y': self.y
+        }

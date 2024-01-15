@@ -2,6 +2,7 @@
 import json
 import os
 
+
 class Base:
     # Private class attribute
     __nb_objects = 0
@@ -37,13 +38,17 @@ class Base:
     @classmethod
     def load_from_file(cls):
         class_name = cls.__name__
-        file_name = class_name + ".json"
+        file_name = f"{class_name}.json"  # Use f-string for string formatting
 
         if os.path.exists(file_name):
             with open(file_name, 'r') as f:
                 json_data = f.read()
-            return [cls.create(**obj) for obj in cls.from_json_string(json_data)]
 
+            objects = [
+                cls.create(**obj)
+                for obj in cls.from_json_string(json_data)
+            ]
+            return objects
         else:
             return []
 

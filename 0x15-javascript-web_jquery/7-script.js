@@ -6,3 +6,6 @@ fetch("https://swapi-api.alx-tools.com/api/people/5/?format=json")
         let name = data
         $("#character").text(name['name'] );
     })
+    .catch((error) => {
+      console.error('Error fetching data:', error);
+  });
